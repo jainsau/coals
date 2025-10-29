@@ -1,0 +1,33 @@
+[project]
+name = "coals"
+version = "0.1.0"
+description = "Fork of Apache Plasma"
+authors = [
+    {name = "Saurabh", email = "saurabh_jain2011@pgp.isb.edu"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "mypy", "ipython>=9.6.0,<10.0.0"]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "coals"
+version = "0.1.0"
+description = "Fork of Apache Plasma"
+authors = ["Saurabh <saurabh_jain2011@pgp.isb.edu>"]
+packages = [{include = "coals"}]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
+black = "^23.0"
+mypy = "^1.0"
+ipython = "^9.6.0"
