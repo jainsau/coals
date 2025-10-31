@@ -6,12 +6,12 @@ Demo script for coals library showing basic usage.
 import pickle
 import time
 from multiprocessing import Process
-from coals import PlasmaStore, ObjectNotFound
+from coals import Store, ObjectNotFound
 
 
 def client_reader(meta_dict, obj_id):
     """Reader process that accesses the shared object."""
-    store = PlasmaStore(manager_dict=meta_dict)
+    store = Store(manager_dict=meta_dict)
     print("[reader] metadata snapshot:", store.list_objects())
     try:
         shm, size = store.get(obj_id)
@@ -34,7 +34,7 @@ def client_reader(meta_dict, obj_id):
 
 def main():
     """Main demo function."""
-    store = PlasmaStore()
+    store = Store()
     
     # Store a python object as pickled bytes (common pattern)
     payload = {"message": "hello from coals prototype", "time": time.time()}
