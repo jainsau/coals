@@ -25,11 +25,11 @@ poetry install
 ## Usage
 
 ```python
-from coals import PlasmaStore
+from coals import Furnace
 import pickle
 
 # Create a store
-store = PlasmaStore()
+store = Furnace()
 
 # Store some data
 data = pickle.dumps({"message": "hello", "value": 42})

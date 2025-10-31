@@ -4,11 +4,11 @@ Coals: A Plasma-like in-memory object store using Python's multiprocessing.share
 This is a small educational prototype — not production-ready.
 """
 
-from .store import PlasmaStore, ObjectExists, ObjectNotFound, ObjectNotSealed
+from .furnace import Furnace, ObjectExists, ObjectNotFound, ObjectNotSealed
 
 __version__ = "0.1.0"
 __all__ = [
-    "PlasmaStore",
+    "Furnace",
     "ObjectExists", 
     "ObjectNotFound",
     "ObjectNotSealed"
